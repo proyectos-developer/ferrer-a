@@ -72,7 +72,8 @@ export default function ModalCarrito({proporcional}) {
                             <button className='btn rounded-pill' 
                                 style={{width: '49%', height: 50 / proporcional, marginTop: 5 / proporcional, marginBottom: 5 / proporcional, fontSize: 18 / proporcional,
                                 background: boton_carrito ? 'rgb(255, 210, 0)' : '#4a9ae9', color: boton_carrito ? 'black' : 'white'}} 
-                                onMouseOut={() => setBotonCarrito(true)} onMouseLeave={() => setBotonCarrito(false)}>
+                                onMouseOut={() => setBotonCarrito(true)} onMouseLeave={() => setBotonCarrito(false)}
+                                onClick={() => {navigate ('/carrito-compras'); dispatch(set_modal_carrito(false))}}>
                                 Ver carrito
                             </button>
                             <button className='btn rounded-pill' 

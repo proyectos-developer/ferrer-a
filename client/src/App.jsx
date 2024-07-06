@@ -23,6 +23,14 @@ import TiendaPanel from './components/tienda/panel.jsx'
 import TiendaPanelTablet from './components/tienda/paneltablet.jsx'
 import TiendaPanelCell from './components/tienda/panelcell.jsx'
 
+import ContactanosPanel from './components/contactanos/panel.jsx'
+import ContactanosPanelTablet from './components/contactanos/paneltablet.jsx'
+import ContactanosPanelCell from './components/contactanos/panelcell.jsx'
+
+import CarritoComprasPanel from './components/carrito/panel.jsx'
+import CarritoComprasPanelTablet from './components/carrito/paneltablet.jsx'
+import CarritoComprasPanelCell from './components/carrito/panelcell.jsx'
+
 export default function App() {
     const [width, setWidth] = useState (window.outerWidth)
 
@@ -60,6 +68,14 @@ export default function App() {
                   <Route path='nuestra-tienda' element={width < 500 ? <TiendaPanelCell   proporcional={499 / width}/> : 
                                                         width < 991 ? <TiendaPanelTablet proporcional={991 / width}/> : 
                                                                       <TiendaPanel       proporcional={1920 / width} />}/>
+
+                  <Route path='contactanos' element={width < 500 ? <ContactanosPanelCell   proporcional={499 / width}/> : 
+                                                     width < 991 ? <ContactanosPanelTablet proporcional={991 / width}/> : 
+                                                                   <ContactanosPanel       proporcional={1920 / width} />}/>
+
+                  <Route path='carrito-compras' element={width < 500 ? <CarritoComprasPanelCell   proporcional={499 / width}/> : 
+                                                         width < 991 ? <CarritoComprasPanelTablet proporcional={991 / width}/> : 
+                                                                       <CarritoComprasPanel       proporcional={1920 / width} />}/>
               </Route>
           </Routes>
       </BrowserRouter>

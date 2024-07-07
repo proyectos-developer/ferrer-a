@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 
 import icono_search from '../../assets/iconos/icono_search_white_96.png'
+import { useNavigate } from 'react-router-dom'
 
 export default function BarraSuperior({proporcional}) {
 
+    const navigate = useNavigate()
+    
     const [search, setSearch] = useState('')
     
     return (
@@ -41,7 +44,8 @@ export default function BarraSuperior({proporcional}) {
                         <img src={icono_search} style={{width: 20 / proporcional, height: 20 / proporcional, margin: 5 / proporcional, cursor: 'pointer'}}/>
                     </div>
 
-                    <div className='d-flex justify-content-center' style={{width: '20%', height: '100%', paddingTop: 13 / proporcional, paddingBottom: 13 / proporcional}}>
+                    <div className='d-flex justify-content-center' style={{width: '20%', height: '100%', paddingTop: 13 / proporcional, paddingBottom: 13 / proporcional,
+                            cursor: 'pointer'}} onClick={() => navigate ('/session')}>
                         <p className='' 
                             style={{fontSize: 18 / proporcional, lineHeight: `${24 / proporcional}px`, marginBottom: 0 / proporcional, color: 'white',
                                     fontWeight: 400, fontFamily: 'Noto Sans Georgian, sans-serif', cursor: 'default', textAlign: 'center'}}>

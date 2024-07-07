@@ -31,6 +31,14 @@ import CarritoComprasPanel from './components/carrito/panel.jsx'
 import CarritoComprasPanelTablet from './components/carrito/paneltablet.jsx'
 import CarritoComprasPanelCell from './components/carrito/panelcell.jsx'
 
+import SessionPanel from './components/session/panel.jsx'
+import SessionPanelTablet from './components/session/paneltablet.jsx'
+import SessionPanelCell from './components/session/panelcell.jsx'
+
+import OlvidePasswordPanel from './components/session/olvidepassword/panel.jsx'
+import OlvidePasswordPanelTablet from './components/session/olvidepassword/paneltablet.jsx'
+import OlvidePasswordPanelCell from './components/session/olvidepassword/panelcell.jsx'
+
 export default function App() {
     const [width, setWidth] = useState (window.outerWidth)
 
@@ -76,6 +84,14 @@ export default function App() {
                   <Route path='carrito-compras' element={width < 500 ? <CarritoComprasPanelCell   proporcional={499 / width}/> : 
                                                          width < 991 ? <CarritoComprasPanelTablet proporcional={991 / width}/> : 
                                                                        <CarritoComprasPanel       proporcional={1920 / width} />}/>
+
+                  <Route path='session' element={width < 500 ? <SessionPanelCell   proporcional={499 / width}/> : 
+                                                 width < 991 ? <SessionPanelTablet proporcional={991 / width}/> : 
+                                                               <SessionPanel       proporcional={1920 / width} />}/>
+
+                  <Route path='olvide-password' element={width < 500 ? <OlvidePasswordPanelCell   proporcional={499 / width}/> : 
+                                                         width < 991 ? <OlvidePasswordPanelTablet proporcional={991 / width}/> : 
+                                                                       <OlvidePasswordPanel       proporcional={1920 / width} />}/>
               </Route>
           </Routes>
       </BrowserRouter>

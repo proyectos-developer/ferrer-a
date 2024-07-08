@@ -3,7 +3,7 @@ import React from 'react'
 import icono_right from '../../assets/iconos/icono_right_black_96.png'
 import icono_left from '../../assets/iconos/icono_left_black_96.png'
 
-import CardProducto from './card/producto.jsx'
+import CardProductoTablet from './card/productotablet.jsx'
 
 export default function ProductosMasValorados({proporcional}) {
 
@@ -30,19 +30,19 @@ export default function ProductosMasValorados({proporcional}) {
 
             <div className='d-flex justify-content-between' style={{width: '100%', height: 'auto'}}>
                 <div style={{width: '19%', height: 'auto'}}>
-                    <CardProducto proporcional={proporcional}/>
+                    <CardProductoTablet proporcional={proporcional}/>
                 </div>
                 <div style={{width: '19%', height: 'auto'}}>
-                    <CardProducto proporcional={proporcional}/>
+                    <CardProductoTablet proporcional={proporcional}/>
                 </div>
                 <div style={{width: '19%', height: 'auto'}}>
-                    <CardProducto proporcional={proporcional}/>
+                    <CardProductoTablet proporcional={proporcional}/>
                 </div>
                 <div style={{width: '19%', height: 'auto'}}>
-                    <CardProducto proporcional={proporcional}/>
+                    <CardProductoTablet proporcional={proporcional}/>
                 </div>
                 <div style={{width: '19%', height: 'auto'}}>
-                    <CardProducto proporcional={proporcional}/>
+                    <CardProductoTablet proporcional={proporcional}/>
                 </div>
             </div>
         </div>

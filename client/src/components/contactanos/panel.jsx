@@ -5,7 +5,7 @@ import Formulario from './formulario.jsx'
 import DatosContacto from './datoscontacto.jsx'
 import Suscribirse from '../home/suscribirse.jsx'
 
-export default function NosotrosPanel({proporcional}) {
+export default function ContactanosPanel({proporcional}) {
 
     return (
         <div style={{width: '100%', height: 'auto'}}>
